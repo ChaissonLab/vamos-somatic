@@ -1,0 +1,6 @@
+version: 2.1.2
+workflows:
+  - subclass: WDL
+    primaryDescriptorPath: vamos-somatic.wdl
+    authors:
+      - orcid: 0000-0001-5395-1457
