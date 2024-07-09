@@ -2,7 +2,7 @@
 # Declare WDL version 1.0 if working in Terra
 version 1.0
 
-workflow vamos {
+workflow vamos-somatic {
 
     input {
         File BAM
@@ -12,7 +12,7 @@ workflow vamos {
 	Int cpu
         Int mem
 	Int diskSizeGb
-	int maxCoverage
+	Int maxCoverage
 	String mode
     }
 
