@@ -13,7 +13,6 @@ workflow vamosSomatic {
         Int mem
 	Int diskSizeGb
 	Int maxCoverage
-	String mode
     }
 
     call vamosAnnotation {
@@ -25,7 +24,6 @@ workflow vamosSomatic {
 	taskCpu = cpu,
 	taskMem = mem,
 	taskDiskSizeGb = diskSizeGb,
-	taskMode = mode,
 	taskMaxCoverage = maxCoverage
     }
 
@@ -44,7 +42,6 @@ task vamosAnnotation {
         Int taskMem
 	Int taskDiskSizeGb
 	Int taskMaxCoverage
-	String taskMode
     }
 
     command <<<
