@@ -2,7 +2,7 @@
 # Declare WDL version 1.0 if working in Terra
 version 1.0
 
-workflow vamos-somatic {
+workflow vamosSomatic {
 
     input {
         File BAM
