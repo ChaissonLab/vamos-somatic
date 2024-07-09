@@ -28,7 +28,7 @@ workflow vamosSomatic {
     }
 
     output {
-        File out_tab = vamosAnnotation.outTab
+        File vamosAllReadCalls = vamosAnnotation.outTab
     }
 }
 
