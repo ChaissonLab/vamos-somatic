@@ -25,7 +25,7 @@ workflow vamos {
 	taskCpu = cpu,
 	taskMem = mem,
 	taskDiskSizeGb = diskSizeGb,
-	taskMode = mode
+	taskMode = mode,
 	taskMaxCoverage = maxCoverage
     }
 
