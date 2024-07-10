@@ -9,10 +9,10 @@ workflow vamosSomatic {
         File BAM_INDEX
         File MOTIFS
         String SAMPLE = basename(BAM, ".bam")
-	Int cpu
+        Int cpu
         Int mem
-	Int diskSizeGb
-	Int maxCoverage
+        Int diskSizeGb
+        Int maxCoverage
     }
 
     call vamosAnnotation {
@@ -40,8 +40,8 @@ task vamosAnnotation {
         String sample
         Int taskCpu
         Int taskMem
-	Int taskDiskSizeGb
-	Int taskMaxCoverage
+        Int taskDiskSizeGb
+        Int taskMaxCoverage
     }
 
     command <<<
@@ -57,7 +57,7 @@ task vamosAnnotation {
         docker: "mchaisso/vamos:2.1.3"
         cpu: taskCpu
         memory: taskMem+"GB"
-	disks: "local-disk " + taskDiskSizeGb + " LOCAL"
+        disks: "local-disk " + taskDiskSizeGb + " LOCAL"
     }
 }
 
