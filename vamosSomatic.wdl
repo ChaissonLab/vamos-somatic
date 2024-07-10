@@ -46,10 +46,11 @@ task vamosAnnotation {
 
     command <<<
         vamos --somatic  -b ~{bam} -r ~{motifs} -s ~{sample} -C ~{taskMaxCoverage} -o ~{sample}.tab -t ~{taskCpu}
+	gzip ~{sample}.tab
     >>>
 
     output {
-        File outTab = "~{sample}.tab"
+        File outTab = "~{sample}.tab.gz"
     }
 
     runtime {
